@@ -9,19 +9,23 @@
 import Foundation
 
 var answer: Bool
+var move = 0
 
-func getSimpleNumber(_ number: Int) -> Bool {
+func getPrimeNumber(_ number: Int) -> Bool {
     return number > 1 && !(2..<number).contains { number % $0 == 0 }
 }
 
-print("Enter your number")
-
-let input = Int(readLine() ?? "0")
-
-answer = getSimpleNumber(input!)
-
-if answer {
-    print("Your number is prime")
-} else {
-    print("Your number not prime")
+while move != 1 {
+    
+    print("Enter your number")
+    
+    let input = Int(readLine() ?? "0")
+    
+    answer = getPrimeNumber(input!)
+    
+    if answer {
+        print("Your number is prime")
+    } else {
+        print("Your number not prime")
+    }
 }
