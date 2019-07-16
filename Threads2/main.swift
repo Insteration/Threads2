@@ -8,5 +8,20 @@
 
 import Foundation
 
-print("Hello, World!")
+var answer: Bool
 
+func getSimpleNumber(_ number: Int) -> Bool {
+    return number > 1 && !(2..<number).contains { number % $0 == 0 }
+}
+
+print("Enter your number")
+
+let input = Int(readLine() ?? "0")
+
+answer = getSimpleNumber(input!)
+
+if answer {
+    print("Your number is prime")
+} else {
+    print("Your number not prime")
+}
