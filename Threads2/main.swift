@@ -14,7 +14,7 @@ func getSimpleNumber(_ number: Int) -> Bool {
     return number > 1 && !(2..<number).contains { number % $0 == 0 }
 }
 
-//print("Enter your number")
+print("Enter your number")
 
 let input = Int(readLine() ?? "0")
 
